@@ -8,8 +8,12 @@
   `mddoc` 生成的 `ignis-sdk` Markdown API 文档树
 - `object-store-presign.md`
   平台托管 COS/S3 presigned upload/download URL 的实现说明、SDK 用法和示例入口
+- `system-api.md`
+  运行时内置系统 API，包括 `GET http://__ignis.svc/v1/services`、agent metadata 和 object-store presign 的系统边界
 - `jobs-and-schedules.md`
   async jobs、cron schedules、job runs API、execution headers 和当前限制
+- `taskplan.md`
+  多 agent 协作 TaskPlan framework crate、`spawn_task_plan`、`tool_callback_url`、system service discovery、agent metadata 和 agent-service memory 边界
 - `cli.md`
   说明 `ignis` CLI 的安装、配置、命令、签名、SQLite 和常见问题
 - `examples/hello-fullstack/`
@@ -18,5 +22,5 @@
   完整 `sqlite-example` 项目，包含 `README.md`、`ignis.hcl`、SQLite 后端源码、前端源码和 `wit`
 - `examples/cos-and-jobs-example/`
   Google 登录 + 每用户 10MB 配额 + 浏览器直传 COS/S3 + 定时清理 job 的完整示例
-- `examples/opencode-agent-e2e/`
-  前端 -> 后端 -> OpenCode agent-service -> 后端轮询 -> 前端显示的完整端到端示例
+- `examples/math-proof-lab/`
+  Math Proof Lab multi-agent theorem proof workflow 示例：前端 -> API proof plan -> orchestrator-agent -> 多个严格性与教学子 agent -> 分层证明合同
